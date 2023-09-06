@@ -29,7 +29,10 @@ public class CreateUser {
        .jsonPath().getInt("id");
 
        Reporter.log("Generated id is : "+id);
-       context.setAttribute("user_id",id);
+       //test level
+       //context.setAttribute("user_id",id);
+      //suite leve
+      context.getSuite().setAttribute("user_id",id);
 
     }
 }

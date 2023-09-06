@@ -11,7 +11,8 @@ import static io.restassured.RestAssured.given;
 public class UpdateUser {
      @Test
     void testUpdateUser(ITestContext context){
-         int id=(Integer)context.getAttribute("user_id");
+         //int id=(Integer)context.getAttribute("user_id");
+         int id=(Integer)context.getSuite().getAttribute("user_id");
         Faker faker=new Faker();
         JSONObject data=new JSONObject();
         data.put("name",faker.name().fullName());

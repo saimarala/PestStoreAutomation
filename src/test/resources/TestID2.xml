@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"  thread-count="2">
+    <listeners>
+        <listener class-name="api.utilities.ExtentReportManager"></listener>
+    </listeners>
+    <test name="Rest Assured API 1">
+        <classes>
+            <class name="day2.CreateUser"/>
+        </classes>
+    </test>
+
+    <test name="Rest Assured API 2" >
+        <classes>
+            <class name="day2.UpdateUser"/>
+        </classes>
+    </test>
+    <test name="Rest Assured API 3">
+        <classes>
+            <class name="day2.GetUser"/>
+        </classes>
+    </test>
+    <test name="Rest Assured API 4">
+        <classes>
+            <class name="day2.DeleteUser"/>
+        </classes>
+    </test>
+</suite>

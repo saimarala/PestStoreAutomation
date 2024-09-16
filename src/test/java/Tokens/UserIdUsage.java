@@ -1,4 +1,4 @@
-package api.day3;
+package Tokens;
 
 import io.restassured.response.Response;
 import org.testng.annotations.Test;

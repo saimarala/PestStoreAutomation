@@ -1,4 +1,4 @@
-package api.day3;
+package Extract;
 
 import org.testng.annotations.Test;
 

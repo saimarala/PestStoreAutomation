@@ -1,14 +1,11 @@
-package api.test;
+package test;
 
 import api.endpoints.userEndPoints;
-import api.payload.User;
+import payload.User;
 import api.utilities.DataProviders;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import static api.endpoints.userEndPoints.createUser;
 
 public class DDTests {
     @Test(priority = 1,dataProvider = "Data",dataProviderClass = DataProviders.class)

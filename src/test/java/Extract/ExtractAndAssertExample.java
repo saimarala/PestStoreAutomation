@@ -1,4 +1,4 @@
-package api.day3;
+package Extract;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;

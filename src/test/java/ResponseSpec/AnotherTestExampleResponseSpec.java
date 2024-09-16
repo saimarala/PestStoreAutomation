@@ -1,6 +1,6 @@
-package api.day3;
+package ResponseSpec;
 
-import static api.day3.ResponseSpecExample.responseSpec;
+import static ResponseSpec.ResponseSpecExample.responseSpec;
 import static io.restassured.RestAssured.given;
 
 public class AnotherTestExampleResponseSpec {

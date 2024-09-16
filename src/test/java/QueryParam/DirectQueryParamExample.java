@@ -1,4 +1,4 @@
-package api.day3;
+package QueryParam;
 
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package api.day3;
+package Extract;
 
 import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;

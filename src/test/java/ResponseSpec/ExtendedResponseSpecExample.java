@@ -1,4 +1,4 @@
-package api.day3;
+package ResponseSpec;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.ResponseSpecification;

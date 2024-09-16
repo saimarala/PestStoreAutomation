@@ -28,7 +28,7 @@ public class CreateUser {
                .post("https://gorest.co.in/public/v2/users")
        .jsonPath().getInt("id");
 
-       Reporter.log("Generated id is : "+id);
+       Reporter.log("Generated id is : "+id,true);
        //test level
        //context.setAttribute("user_id",id);
       //suite leve

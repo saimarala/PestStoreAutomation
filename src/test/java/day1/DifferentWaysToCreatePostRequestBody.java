@@ -55,7 +55,7 @@ public class DifferentWaysToCreatePostRequestBody {
         .then()
                 .statusCode(200);
     }
-//Post request POJO
+//Post request JSONObject
     @Test(priority = 2)
     void testPostJsonLibrary(){
         JSONObject data =new JSONObject();

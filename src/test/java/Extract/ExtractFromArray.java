@@ -11,9 +11,9 @@ public class ExtractFromArray {
     void testExtractFromArray(){
         // Get the list of users
         String response = given()
-                .baseUri("https://api.example.com")
+                .baseUri("https://reqres.in")
                 .when()
-                .get("/users")
+                .get("/api/users?page=2")
                 .asString();
 
         // Use JsonPath to find the ID of "Jane Doe"

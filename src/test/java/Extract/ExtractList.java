@@ -13,12 +13,12 @@ public class ExtractList {
     void testExtractList(){
         // Send GET request and extract the 'type' from phoneNumbers as a list
         Response response = given()
-                .baseUri("https://api.example.com")
+                .baseUri("https://reqres.in")
                 .when()
-                .get("/users/123");
+                .get("/api/users?page=2");
 
         // Extract 'type' fields from the 'phoneNumbers' array as a list of strings
-        List<String> phoneTypes = response.jsonPath().getList("phoneNumbers.type");
+        List<String> phoneTypes = response.jsonPath().getList("data.type");
 
         // Print the extracted phone types
         System.out.println("Phone Types: " + phoneTypes);

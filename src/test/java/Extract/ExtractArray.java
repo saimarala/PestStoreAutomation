@@ -13,15 +13,16 @@ public class ExtractArray {
     void testExtractArray(){
         // Send GET request and extract the 'phoneNumbers' array
         Response response = given()
-                .baseUri("https://api.example.com")
+                .baseUri("https://reqres.in")
                 .when()
-                .get("/users/123");
+                .get("/api/users?page=2");
 
         // Extract 'phoneNumbers' array as a list of maps
-        List<Map<String, String>> phoneNumbers = response.jsonPath().getList("phoneNumbers");
+        List<Map<String, String>> phoneNumbers = response.jsonPath().getList("data");
 
         // Print the extracted phone numbers
-        System.out.println("Phone Numbers: " + phoneNumbers);
+        System.out.println("Phone Numbers: " + phoneNumbers.get(0).get("email"));
+
 
     }
 }

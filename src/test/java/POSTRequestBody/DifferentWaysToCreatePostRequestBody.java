@@ -9,7 +9,9 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -63,6 +65,7 @@ public class DifferentWaysToCreatePostRequestBody {
         data.put("location","India");
         data.put("phone","1234");
         String coursesArr[]={"Java","JS"};
+       List<String> aa= Arrays.asList("Java","JS");
         data.put("courses",coursesArr);
 
         given()

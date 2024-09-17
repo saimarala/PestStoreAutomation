@@ -11,9 +11,9 @@ public class ExtractFullResponse {
     void testExtractFullResponse(){
         // Send GET request and extract the entire response body as a string
         String responseBody = given()
-                .baseUri("https://api.example.com")
+                .baseUri("https://reqres.in")
                 .when()
-                .get("/users/123")
+                .get("/api/users?page=2")
                 .then()
                 .extract()
                 .asString();  // Extract full response as a string

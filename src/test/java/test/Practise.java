@@ -17,6 +17,7 @@ public class Practise {
     void test(){
        Response response = given()
                 .baseUri("https://reqres.in")
+            //   .param("page",2)
                .queryParam("page",2)
 
                 .when()

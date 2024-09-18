@@ -4,6 +4,8 @@ import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.greaterThan;
 
 public class ExtractFromArray {
 
@@ -22,5 +24,11 @@ public class ExtractFromArray {
 
         // Print the extracted ID
         System.out.println("Jane Doe's ID: " + janeDoeId);
+
+        given().
+                get("/users").
+                then().
+                body("users.size()", greaterThan(5)).
+                body("users[0].name", equalTo("John Doe"));
     }
 }

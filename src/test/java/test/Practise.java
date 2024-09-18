@@ -23,7 +23,7 @@ public class Practise {
 //        response.jsonPath().getString("phoneNumbers.find { it.type == 'home' }.number");  // Extract from array
 //       String t= response.jsonPath().getString("data.find { it.id == '7' }.email");  // Extract from array
 
-    //    Reporter.log(response.jsonPath().getString("data[2].email"),true);
+        Reporter.log("sai :"+response.jsonPath().getString("data.find{it.email=='michael.lawson@reqres.in'}.id"),true);
 //        List<Map<String, String>> phoneNumbers = response.jsonPath().getList("data");
         List<Map<String, Object>> engineeringEmployees = response.jsonPath()
                 .getList("data");

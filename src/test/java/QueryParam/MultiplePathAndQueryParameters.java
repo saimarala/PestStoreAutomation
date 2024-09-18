@@ -13,8 +13,8 @@ public class MultiplePathAndQueryParameters {
     @Test
     void testQueryAndParameters(){
         Map<String, Object> pathParams = new HashMap<>();
-        pathParams.put("mypath1","api");
-        pathParams.put("mypath2","users");
+        pathParams.put("myPath1","api");
+        pathParams.put("myPath2","users");
         Map<String, Object> queryParams = new HashMap<>();
         queryParams.put("page",2);
         queryParams.put("id",5);
@@ -26,7 +26,7 @@ public class MultiplePathAndQueryParameters {
                 .pathParams(pathParams)
                 .queryParams(queryParams)
         .when()
-                .get("https://reqres.in/{mypath1}/{mypath2}")
+                .get("https://reqres.in/{myPath1}/{myPath2}")
         .then()
                 .statusCode(200).log().all();
 

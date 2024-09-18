@@ -47,6 +47,7 @@ public class ParsingJSONResponseData {
 //        Assert.assertEquals(res.jsonPath().get("data[1].first_name").toString(),"Lindsay");
 
         JSONObject jo = new JSONObject(res.asString());//converting response to json object
+
         boolean status=false;
         for (int i=0;i<jo.getJSONArray("data").length();i++){
            String fName= jo.getJSONArray("data").getJSONObject(i).get("first_name").toString();

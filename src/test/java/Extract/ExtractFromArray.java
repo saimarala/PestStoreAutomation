@@ -4,8 +4,7 @@ import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.*;
 
 public class ExtractFromArray {
 
@@ -30,5 +29,10 @@ public class ExtractFromArray {
                 then().
                 body("users.size()", greaterThan(5)).
                 body("users[0].name", equalTo("John Doe"));
+        given()
+                .when()
+                .get("/store")
+                .then()
+                .body("..price", everyItem(greaterThan(10.0)));
     }
 }

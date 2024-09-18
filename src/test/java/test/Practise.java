@@ -15,13 +15,13 @@ import static org.hamcrest.Matchers.equalTo;
 public class Practise {
     @Test
     void test(){
-       Response response = given()
-                .baseUri("https://reqres.in")
-            //   .param("page",2)
-               .queryParam("page",2)
+           Response response = given()
+                    .baseUri("https://reqres.in")
+                //   .param("page",2)
+                   .queryParam("page",2)
 
-                .when()
-                .get("/api/users");
+                    .when()
+                    .get("/api/users");
      //  response.then().body("name",equalTo("cerulean"));
    //     Reporter.log(response.then().extract().asString(),true);
 //        response.jsonPath().getString("phoneNumbers.find { it.type == 'home' }.number");  // Extract from array

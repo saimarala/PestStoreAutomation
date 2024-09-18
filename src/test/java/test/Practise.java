@@ -16,6 +16,7 @@ public class Practise {
        Response response = given()
                 .baseUri("https://reqres.in")
                .queryParam("page",2)
+
                 .when()
                 .get("/api/users");
      //  response.then().body("name",equalTo("cerulean"));

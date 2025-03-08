@@ -50,12 +50,14 @@ public class TestPrac {
 
         System.out.println(val);
 
-
+       int val1=0;
         // Extract specific data using loop
         List<Integer> employeeNames = response.jsonPath().getList("data.id");
         for (int name : employeeNames) {
-            System.out.println("Employee Name: " + name);
+          //  System.out.println("Employee Name: " + name);
+            val1 += name;         
         }
+        System.out.println("list  " + val1);
 
 
         // Extract individual values

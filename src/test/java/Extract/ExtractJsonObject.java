@@ -15,12 +15,14 @@ public class ExtractJsonObject {
         Response response = given()
                 .baseUri("https://reqres.in")
                 .when()
-                .get("/api/users?page=2");
+                .get("/api/users?page=2")
+                .then()
+                .extract().response();
 
         // Extract 'address' object
-        Map<String, String> address = response.jsonPath().getMap("address");
+        Map<String, String> address = response.jsonPath().getMap("$");
 
         // Print the extracted address object
-        System.out.println("Address: " + address);
+        System.out.println("Address: " + address.get("email"));
     }
 }

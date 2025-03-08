@@ -18,7 +18,7 @@ public class ExtractList {
                 .get("/api/users?page=2");
 
         // Extract 'type' fields from the 'phoneNumbers' array as a list of strings
-        List<String> phoneTypes = response.jsonPath().getList("data.type");
+        List<String> phoneTypes = response.jsonPath().getList("data.id");
 
         // Print the extracted phone types
         System.out.println("Phone Types: " + phoneTypes);

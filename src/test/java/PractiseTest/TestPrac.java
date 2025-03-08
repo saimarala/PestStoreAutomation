@@ -58,6 +58,7 @@ public class TestPrac {
             val1 += name;         
         }
         System.out.println("list  " + val1);
+        System.out.println(response.jsonPath().getList("data.id").size());
 
 
         // Extract individual values

@@ -44,7 +44,12 @@ public class TestPrac {
 //            System.out.println("Name: " + employee.get("email"));
 //            System.out.println("Role: " + employee.get("first_name"));
 //            System.out.println("------------");
-
+           if( employee.get("id").equals(7)){
+               System.out.println("element found");
+           }
+            if( employee.get("email").equals("michael.lawson@reqres.in")){
+                System.out.println("email found");
+            }
             val += Integer.parseInt(employee.get("id").toString());
         }
 
